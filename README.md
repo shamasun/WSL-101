@@ -69,11 +69,10 @@ Steps
         ```
         sudo service docker start
         ```  
-- On the original WSL2 window
-    - run the code below to notice that nothing is running as expected
-        ```
-        sudo docker ps
-        ```  
+- On the original WSL2 window, run the code below to notice that nothing is running as expected
+    ```
+    sudo docker ps
+    ```  
 - Now run a benchmark test by running the code below. You should get the benchmark result printed on screen
     ```
     sudo docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark
