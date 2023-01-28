@@ -9,6 +9,7 @@ Why WSL?
 - TensorFlow 2.10 was the last TensorFlow release that supported GPU on native-Windows. Starting with TensorFlow 2.11, one needs to have WSL2 to use TensorFlow. The other compromise is to use tensorflow-cpu.
 
 Steps  
+These steps were learnt from watching Prof. Jeff Heaton's Youtube tutorial.  
 - I started with a clean slate, by doing a factory reset of my Windows laptop.
 - Once done, I ensured I had the latest windows update.
 - I then downloaded the right NVIDIA graphics driver for my NVIDIA RTX 2060 graphics card, from [here](https://www.nvidia.com/download/index.aspx). 
