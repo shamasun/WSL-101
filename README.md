@@ -11,7 +11,7 @@ Why WSL?
 Steps  
 - I started with a clean slate, by doing a factory reset of my Windows laptop.
 - Once done, I ensured I had the latest windows update.
-- I then downloaded the right NVIDIA graphics driver for my NVIDIA RTX 2060 graphics card, from here https://www.nvidia.com/download/index.aspx. I then restarted the whenever prompted.
+- I then downloaded the right NVIDIA graphics driver for my NVIDIA RTX 2060 graphics card, from [here](https://www.nvidia.com/download/index.aspx). I then restarted the whenever prompted.
 - Run Powershell as an administrator
 - In powershell, run the command
     ```
