@@ -79,10 +79,11 @@ Run C:\> wsl.exe to access Ubuntu Linux
 
 Source: https://www.youtube.com/watch?v=CO43b6XWHNI
 https://www.tensorflow.org/install/pip#windows-wsl2
-
+https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
+https://learn.microsoft.com/en-us/windows/wsl/install
+https://docs.nvidia.com/cuda/wsl-user-guide/index.html#step-3-set-up-a-linux-development-environment
 
 
 Notes:
 
 Don't have to do the Windows Insidewr Program. You had to do that before. Now stable.
-D
