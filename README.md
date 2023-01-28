@@ -41,7 +41,7 @@ These steps were learnt from watching Prof. Jeff Heaton's Youtube tutorial.
     ```  
 - Now, to install docker, get back to your home directory in Linux by running
     ```
-    cd ...
+    cd..
     ```  
 - Download docker by running the command below. You may get a message recommending using Docker Desktop for Windows instead. Ignore this. If you want to use the NVIDIA GPU, you got to use WSL.
     ```
