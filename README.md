@@ -14,9 +14,9 @@ Steps
 - I then downloaded the right NVIDIA graphics driver for my NVIDIA RTX 2060 graphics card, from here https://www.nvidia.com/download/index.aspx. I then restarted the whenever prompted.
 - Run Powershell as an administrator
 - In powershell, run the command
-```
-wsl.exe --install
-```  
+    ```
+    wsl.exe --install
+    ```  
 - Restart system again
 - Run Powershell a administrator
 - In powershell, run the command wsl.exe --update
