@@ -1,4 +1,4 @@
-# Working with Windows Subsystem for Linux (WSL)
+# Installing Windows Subsystem for Linux (WSL) with Docker
 
 WSL is a Windows feature that enables users to run native Linux applications, containers and command-line tools directly on Windows 11 and later. WSL2  is the 2nd generation of WSL.
 
