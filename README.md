@@ -102,10 +102,10 @@ Steps
         print("GPU is", "available" if check_gpu else "NOT AVAILABLE")
         ```  
 
-Sources: 
-https://www.youtube.com/watch?v=CO43b6XWHNI
-https://www.tensorflow.org/install/pip#windows-wsl2
-https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
-https://learn.microsoft.com/en-us/windows/wsl/install
-https://docs.nvidia.com/cuda/wsl-user-guide/index.html#step-3-set-up-a-linux-development-environment
-https://github.com/jeffheaton/t81_558_deep_learning/blob/master/t81_558_class_01_1_overview.ipynb
+Sources:   
+https://www.youtube.com/watch?v=CO43b6XWHNI  
+https://www.tensorflow.org/install/pip#windows-wsl2  
+https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html  
+https://learn.microsoft.com/en-us/windows/wsl/install  
+https://docs.nvidia.com/cuda/wsl-user-guide/index.html#step-3-set-up-a-linux-development-environment  
+https://github.com/jeffheaton/t81_558_deep_learning/blob/master/t81_558_class_01_1_overview.ipynb  
