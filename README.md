@@ -1,29 +1,22 @@
-# Working-with-WSL
-Working with WSL
+# Working with Windows Subsystem for Linux (WSL)
 
-WSL = Windows feature that enables users to run native Linux applications, containers and command-line tools directly on Windows 11 and later.  
-WSL2  
-- second generation of WSL
-- has a VM with a Linux WSL Kernel
-- tightly integrated with the Microsoft Windows OS
-- interoperable with other Windows desktop
+WSL is a Windows feature that enables users to run native Linux applications, containers and command-line tools directly on Windows 11 and later. WSL2  is the 2nd generation of WSL.
 
 Why WSL?  
-- developers working across both Linux and Windows environments have a very disruptive workflow (stop all the work and then switch the system or reboot)
-- need for seamless transition and better productivity
-- applications hitherto only available on Linux to be available on Windows
-
-ML Platforms and using them on Windows with GPU support  
-- TensorFlow 2.10 was the last TensorFlow release that supported GPU on native-Windows. Starting with TensorFlow 2.11, you will need to install TensorFlow in WSL2, or install tensorflow-cpu
-- TensorFlow with GPU access is supported for WSL2 on Windows 10 19044 or higher. This corresponds to Windows 10 version 21H2, the November 2021 update.
-
+- Developers working across Linux and Windows have experience a disruptive workflow. They have to stop all work to switch to the other system.
+- There was a need for seamless transition and better productivity.
+- Further, it allows access to applications on Windows, hitherto only available on Linux.
+- TensorFlow 2.10 was the last TensorFlow release that supported GPU on native-Windows. Starting with TensorFlow 2.11, one needs to have WSL2 to use TensorFlow. The other compromise is to use tensorflow-cpu.
 
 Steps  
-- I first began with doing a factory reset of my Asus windows laptop  
-- I then check my Windows laptop for the latest windows update
-- I then downloaded the right Nvidia graphics driver for my Nvidia RTX 2060 graphics card. The download link is https://www.nvidia.com/download/index.aspx. Then complete the installation, restarting the system when prompted.
-- Run Powershell a administrator
-- In powershell, run the command wsl.exe --install
+- I started with a clean slate, by doing a factory reset of my Windows laptop.
+- Once done, I ensured I had the latest windows update.
+- I then downloaded the right NVIDIA graphics driver for my NVIDIA RTX 2060 graphics card, from here https://www.nvidia.com/download/index.aspx. I then restarted the whenever prompted.
+- Run Powershell as an administrator
+- In powershell, run the command
+- ```
+wsl.exe --install
+```
 - Restart system again
 - Run Powershell a administrator
 - In powershell, run the command wsl.exe --update
