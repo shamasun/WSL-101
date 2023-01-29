@@ -33,7 +33,8 @@ These steps were learnt from watching Prof. Jeff Heaton's Youtube tutorial[^2], 
     ```
     wsl --install -d Ubuntu-20.04
     ```  
-- From the start button on the windows taskbar, run the Ubuntu-20.04 application. If you get an error that the VM could not be started because the required feature could not be installed, this means that the hypervisor is not properly installed. Please enable Hyper-V from your BIOS.
+- From the start button on the windows taskbar, run the Ubuntu-20.04 application. 
+    > If you get an error that the VM could not be started because the required feature could not be installed, this means that the hypervisor is not properly installed. Please enable Hyper-V from your BIOS.  
 - Launch Ubuntu-20.04 again from start menu. Configure a UNIX user name and password when asked.
 - Test if you can navigate to the C drive on Windows using  
     ```
