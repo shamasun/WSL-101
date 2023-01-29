@@ -12,7 +12,7 @@ These steps were learnt from watching Prof. Jeff Heaton's Youtube tutorial.
 - Start with a clean slate (I did a factory reset of my Windows laptop, because I was reeling under a failed prior installation). Ensure that the hypervisor, Hyper-V, is enabled via BIOS. At this point, I had the below stack -  
     - *Personal Computer*: Asus ROG Zephyrus G14 Laptop
     - *Graphics card*: NVIDIA GeForce RTX 2060Q
-    - *Operating System*: Windows 11
+    - *Host Operating System*: Windows 11
     - *Driver*: NVIDIA Graphics Driver. A software that allows Windows OS and other applications use the PC's graphics hardware or GPU.
     - *Hypervisor*: Hyper-V. Since WSL2 is essentially a VM running the Linux kernel, it should rest on a hypervisor. The hypervisor used is [Hyper-V](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/).
 - Once done, update Windows 11 OS.
@@ -49,6 +49,13 @@ At this point, you have a working WSL2 VM running on top of the hypervisor.
     ```
     docker
     ```  
+    > From the bottom up, these are the tools that docker uses to run containers:
+        - The low-level container runtime (Lowest-level). runc is a low-level container runtime. It uses the native features of Linux to create and run containers. It follows the OCI standard, and it includes libcontainer, a Go library for creating containers.
+        - The high-level container runtime. containerd sits above the low-level runtime, and adds a bunch of features, like transferring images, storage, and networking. It also fully supports the OCI spec.
+        - The Docker daemon. dockerd is a daemon process (a long-running process that stays running in the background) which provides a standard API, and talks to the container runtime 1
+        - The Docker CLI tool (Highest level). Finally, docker-cli gives you the power to interact with the Docker daemon using docker ... commands. This lets you control containers without needing to understand the lower levels.
+        So, in reality, when you run a container with docker, you’re actually running it through the Docker daemon, which calls containerd, which then uses runc.  
+
 - Now, to install the NVIDIA Container toolkit, run the following commands one after another - 
     ```
     distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
@@ -108,3 +115,4 @@ https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.
 https://learn.microsoft.com/en-us/windows/wsl/install  
 https://docs.nvidia.com/cuda/wsl-user-guide/index.html#step-3-set-up-a-linux-development-environment  
 https://github.com/jeffheaton/t81_558_deep_learning/blob/master/t81_558_class_01_1_overview.ipynb  
+https://www.tutorialworks.com/difference-docker-containerd-runc-crio-oci/  
