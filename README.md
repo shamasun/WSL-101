@@ -51,7 +51,7 @@ At this point, you have a working WSL2 VM running on top of the hypervisor.
     docker
     ```  
     > From the bottom up, these are the tools that docker uses to run containers:  
-        1. **Low-level container runtime (Lowest-level)**. *runc* is a low-level container runtime. It uses the native features of Linux to create and run containers. It follows the OCI standard, and it includes libcontainer, a Go library for creating containers.  
+        1. **Low-level container runtime (Lowest-level)**. *runc* is a low-level container runtime. It uses the native features of Linux to create and run containers. It follows the OCI standard, and it includes *libcontainer*, a Go library for creating containers.  
         2. **High-level container runtime**. *containerd* sits above the low-level runtime, and adds a bunch of features, like transferring images, storage, and networking. It also fully supports the OCI spec.  
         3. **Docker daemon**. *dockerd* is a daemon process (a long-running process that stays running in the background) which provides a standard API, and talks to the container runtime.  
         4. **Docker CLI tool (Highest level)**. Finally, *docker-cli* gives you the power to interact with the Docker daemon using "docker ..." commands. This lets you control containers without needing to understand the lower levels.  
@@ -71,6 +71,8 @@ At this point, you have a working WSL2 VM running on top of the hypervisor.
         ```
         sudo apt-get install -y nvidia-docker2
         ```  
+    > A question here is, why install further runtime libraries (notice *libnvidia-container* in the curl commands) when docker itself has a *libcontainer*? Docker containers are platform-agnostic, but also hardware-agnostic. This presents a problem when using specialized hardware such as NVIDIA GPUs which require kernel modules and user-level libraries to operate. As a result, Docker does not natively support NVIDIA GPUs within containers. For now, it is useful to think of this step as adding packages, that come as a part of the NVIDIA toolkit, that are wrappers to docker processes to enable the use of GPUs.
+
 - Open a separate WSL2 window,
     - start the docker service by running 
         ```
