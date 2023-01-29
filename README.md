@@ -10,11 +10,11 @@ WSL is a Windows feature that enables users to run native Linux applications, co
 ### Steps  
 These steps were learnt from watching Prof. Jeff Heaton's Youtube tutorial.  
 - Start with a clean slate (I did a factory reset of my Windows laptop, because I was reeling under a failed prior installation). Ensure that the hypervisor, Hyper-V, is enabled via BIOS. At this point, I had the below stack -  
-    - Personal Computer: Asus ROG Zephyrus G14 Laptop
-    - Graphics card: NVIDIA GeForce RTX 2060Q
-    - Operating System: Windows 11
-    - Driver: NVIDIA Graphics Driver. Essentially a software that allows the Windows OS and other software applications use the PC's graphics hardware or GPU.
-    - Hypervisor: Hyper-V. Since WSL2 is essentially a VM runniing the Linux kernel, it should rest on a hypervisor. The hypervisor used is [Hyper-V](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/).
+    - *Personal Computer*: Asus ROG Zephyrus G14 Laptop
+    - *Graphics card*: NVIDIA GeForce RTX 2060Q
+    - *Operating System*: Windows 11
+    - *Driver*: NVIDIA Graphics Driver. Essentially a software that allows the Windows OS and other software applications use the PC's graphics hardware or GPU.
+    - *Hypervisor*: Hyper-V. Since WSL2 is essentially a VM runniing the Linux kernel, it should rest on a hypervisor. The hypervisor used is [Hyper-V](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/).
 - Once done, update Windows 11 OS.
 - Download the latest NVIDIA graphics driver for your NVIDIA graphics card, from [here](https://www.nvidia.com/download/index.aspx). This will ensure that the driver's version is current.
 - Restart the system and run Powershell as an administrator, in preparation for installing WSL2.
