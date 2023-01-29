@@ -54,7 +54,6 @@ At this point, you have a working WSL2 VM running on top of the hypervisor.
         2. **High-level container runtime**. *containerd* sits above the low-level runtime, and adds a bunch of features, like transferring images, storage, and networking. It also fully supports the OCI spec.  
         3. **Docker daemon**. *dockerd* is a daemon process (a long-running process that stays running in the background) which provides a standard API, and talks to the container runtime.  
         4. **Docker CLI tool (Highest level)**. Finally, *docker-cli* gives you the power to interact with the Docker daemon using "docker ..." commands. This lets you control containers without needing to understand the lower levels.  
-          
         So, in reality, when you run a container with docker, you’re actually running it through the Docker *daemon*, which calls *containerd*, which then uses *runc*.  
 
 - Now, to install the NVIDIA Container toolkit, run the following commands one after another - 
