@@ -1,20 +1,23 @@
-# Installing Windows Subsystem for Linux (WSL) with Docker
+## Installing Windows Subsystem for Linux (WSL) with Docker  
+WSL is a Windows feature that enables users to run native Linux applications, containers and command-line tools directly on Windows 11 and later. WSL2 is the 2nd generation of WSL.
 
-WSL is a Windows feature that enables users to run native Linux applications, containers and command-line tools directly on Windows 11 and later. WSL2  is the 2nd generation of WSL.
-
-Why WSL?  
+### Why WSL?  
 - Developers working across Linux and Windows have experience a disruptive workflow. They have to stop all work to switch to the other system.
 - There was a need for seamless transition and better productivity.
 - Further, it allows access to applications on Windows, hitherto only available on Linux.
 - TensorFlow 2.10 was the last TensorFlow release that supported GPU on native-Windows. Starting with TensorFlow 2.11, one needs to have WSL2 to use TensorFlow. The other compromise is to use tensorflow-cpu.
 
-Steps  
+### Steps  
 These steps were learnt from watching Prof. Jeff Heaton's Youtube tutorial.  
-- I started with a clean slate, by doing a factory reset of my Windows laptop.
-- Once done, I ensured I had the latest windows update.
-- I then downloaded the right NVIDIA graphics driver for my NVIDIA RTX 2060 graphics card, from [here](https://www.nvidia.com/download/index.aspx). 
-- Restart whenever prompted.
-- Now, run Powershell as an administrator
+- Start with a clean slate (I did a factory reset of my Windows laptop, because I was reeling under a failed prior installation). Ensure that the hypervisor, Hyper-V, is enabled via BIOS. At this point, you will have this stack in place -  
+    - Personal Computer: Asus ROG Zephyrus G14 Laptop
+    - Graphics card: NVIDIA GeForce RTX 2060Q
+    - Operating System: Windows 11
+    - Driver: NVIDIA Graphics Driver. Essentially a software that allows the Windows OS and other software applications use the PC's graphics hardware or GPU.
+    - Hypervisor: Hyper-V. Since WSL2 is essentially a VM runniing the Linux kernel, it should rest on a hypervisor. The hypervisor used is [Hyper-V](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/).
+- Once done, update Windows 11 OS.
+- Download the latest NVIDIA graphics driver for your NVIDIA graphics card, from [here](https://www.nvidia.com/download/index.aspx). This will ensure that the driver's version is current.
+- Restart the system and run Powershell as an administrator, in preparation for installing WSL2.
 - In powershell, run the command
     ```
     wsl.exe --install
@@ -33,16 +36,14 @@ These steps were learnt from watching Prof. Jeff Heaton's Youtube tutorial.
     ```
     wsl --install -d Ubuntu-20.04
     ```  
-- From the start button on the windows taskbar, run the Ubuntu-20.04 application. If you get an error that the VM could not be started because the required feature could not be installed, this means that the hypervisor is not installed. Please enable Hyper-V from your BIOS.
+- From the start button on the windows taskbar, run the Ubuntu-20.04 application. If you get an error that the VM could not be started because the required feature could not be installed, this means that the hypervisor is not properly installed. Please enable Hyper-V from your BIOS.
 - Launch Ubuntu-20.04 again from start menu. Configure a UNIX user name and password when asked.
-- Test if you can navigate to the C drive on Windows using 
+- Test if you can navigate to the C drive on Windows using  
     ```
     cd /mnt/c
     ```  
-- Now, to install docker, get back to your home directory in Linux by running
-    ```
-    cd..
-    ```  
+At this point, you have a working WSL2 VM running on top of the hypervisor for your Windows environment.  
+- Now, to install docker, get back to your home directory in Linux.
 - Download docker by running the command below. You may get a message recommending using Docker Desktop for Windows instead. Ignore this. If you want to use the NVIDIA GPU, you got to use WSL.
     ```
     curl https://get.docker.com | sh   
