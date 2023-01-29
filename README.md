@@ -41,7 +41,8 @@ These steps were learnt from watching Prof. Jeff Heaton's Youtube tutorial.
     ```  
 At this point, you have a working WSL2 VM running on top of the hypervisor.  
 - Now, to install docker, get back to your home directory in Linux.
-- Install docker by running the command below. You may get a message recommending using Docker Desktop for Windows instead. Ignore this. If you want to use the NVIDIA GPU, you have to use WSL anyway. The command below, is the approach of using a convenience script for installing Docker into development environments non-interactively. For other methods of installing Docker engine on Ubuntu, see [here](https://docs.docker.com/engine/install/ubuntu/).
+- Install docker by running the command below. 
+    > You may get a message recommending using Docker Desktop for Windows instead. Ignore this. If you want to use the NVIDIA GPU, you have to use WSL anyway. The command below, is the approach of using a convenience script for installing Docker into development environments non-interactively. For other methods of installing Docker engine on Ubuntu, see [here](https://docs.docker.com/engine/install/ubuntu/).  
     ```
     curl https://get.docker.com | sh   
     ```  
