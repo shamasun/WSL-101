@@ -109,8 +109,6 @@ These steps were learnt from watching Prof. Jeff Heaton's Youtube tutorial[^2], 
         print(f"Python {sys.version}")
         print("GPU is", "available" if check_gpu else "NOT AVAILABLE")
         ```  
-
-Sources:   
 [^1]:  [Install TensorFlow](https://www.tensorflow.org/install/pip#windows-wsl2)  
 [^2]:  [Install WSL2 on Windows 11 with NVIDIA GPU and Docker Support](https://www.youtube.com/watch?v=CO43b6XWHNI)  
 [^3]:  [NVIDIA Container toolkit Installation guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)  
