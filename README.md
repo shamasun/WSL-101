@@ -49,11 +49,11 @@ At this point, you have a working WSL2 VM running on top of the hypervisor.
     ```
     docker
     ```  
-    > From the bottom up, these are the tools that docker uses to run containers:
-        - The low-level container runtime (Lowest-level). runc is a low-level container runtime. It uses the native features of Linux to create and run containers. It follows the OCI standard, and it includes libcontainer, a Go library for creating containers.
-        - The high-level container runtime. containerd sits above the low-level runtime, and adds a bunch of features, like transferring images, storage, and networking. It also fully supports the OCI spec.
-        - The Docker daemon. dockerd is a daemon process (a long-running process that stays running in the background) which provides a standard API, and talks to the container runtime 1
-        - The Docker CLI tool (Highest level). Finally, docker-cli gives you the power to interact with the Docker daemon using docker ... commands. This lets you control containers without needing to understand the lower levels.
+    > From the bottom up, these are the tools that docker uses to run containers:  
+        - The low-level container runtime (Lowest-level). runc is a low-level container runtime. It uses the native features of Linux to create and run containers. It follows the OCI standard, and it includes libcontainer, a Go library for creating containers.  
+        - The high-level container runtime. containerd sits above the low-level runtime, and adds a bunch of features, like transferring images, storage, and networking. It also fully supports the OCI spec.  
+        - The Docker daemon. dockerd is a daemon process (a long-running process that stays running in the background) which provides a standard API, and talks to the container runtime 1  
+        - The Docker CLI tool (Highest level). Finally, docker-cli gives you the power to interact with the Docker daemon using docker ... commands. This lets you control containers without needing to understand the lower levels.  
         So, in reality, when you run a container with docker, you’re actually running it through the Docker daemon, which calls containerd, which then uses runc.  
 
 - Now, to install the NVIDIA Container toolkit, run the following commands one after another - 
