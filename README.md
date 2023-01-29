@@ -73,11 +73,10 @@ At this point, you have a working WSL2 VM running on top of the hypervisor.
         ```  
     > A question here is, why install further runtime libraries (notice *libnvidia-container* in the curl commands) when docker itself has a *libcontainer*? Docker containers are platform-agnostic and hardware-agnostic. This presents a problem when using specialized hardware such as NVIDIA GPUs which require kernel modules and user-level libraries to operate. As a result, Docker does not natively support NVIDIA GPUs within containers. For now, it is useful to think of this step as adding packages from the NVIDIA toolkit, that are wrappers to docker processes to enable the use of GPUs in docker containers.
 
-- Open a separate WSL2 window,
-    - start the docker service by running 
-        ```
-        sudo service docker start
-        ```  
+- Open a separate WSL2 window and start the docker service by running 
+    ```
+    sudo service docker start
+    ```  
 - On the original WSL2 window, run the code below to notice that nothing is running as expected
     ```
     sudo docker ps
