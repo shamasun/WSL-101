@@ -9,7 +9,7 @@ WSL is a Windows feature that enables users to run native Linux applications, co
 
 ### Steps  
 These steps were learnt from watching Prof. Jeff Heaton's Youtube tutorial.  
-- Start with a clean slate (I did a factory reset of my Windows laptop, because I was reeling under a failed prior installation). Ensure that the hypervisor, Hyper-V, is enabled via BIOS. At this point, I had the below stack in place -  
+- Start with a clean slate (I did a factory reset of my Windows laptop, because I was reeling under a failed prior installation). Ensure that the hypervisor, Hyper-V, is enabled via BIOS. At this point, I had the below stack -  
     - Personal Computer: Asus ROG Zephyrus G14 Laptop
     - Graphics card: NVIDIA GeForce RTX 2060Q
     - Operating System: Windows 11
