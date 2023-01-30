@@ -12,7 +12,7 @@ These steps were learnt from watching Prof. Jeff Heaton's Youtube tutorial[^2], 
     - *Personal Computer*: Asus ROG Zephyrus G14 Laptop
     - *Graphics card*: NVIDIA GeForce RTX 2060Q
     - *Host Operating System*: Windows 11
-    - *Driver*: NVIDIA Graphics Driver. A software that allows Windows OS and other applications use the PC's graphics hardware or GPU.
+    - *Driver*: NVIDIA Graphics Driver (A software that allows Windows OS and other applications use the PC's graphics hardware or GPU).
     - *Hypervisor*: Hyper-V. Since WSL2 is essentially a VM running the Linux kernel, it should rest on a hypervisor. The hypervisor used is [Hyper-V](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/).
 - Once done, update Windows 11 OS.
 - Download the latest NVIDIA graphics driver for your NVIDIA graphics card, from [here](https://www.nvidia.com/download/index.aspx). This will ensure that the driver's version is current.
