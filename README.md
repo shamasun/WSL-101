@@ -2,9 +2,8 @@
 WSL is a Windows feature that enables users to run native Linux applications, containers and command-line tools directly on Windows 11 and later. WSL2 is the 2nd generation of WSL.
 
 ### Why WSL?  
-- Developers working across Linux and Windows have experience a disruptive workflow. They have to stop all work to switch to the other system.
+- Developers working across Linux and Windows experience a disruptive workflow. They have to stop all work to switch to the other system.
 - There was a need for seamless transition and better productivity.
-- Further, it allows access to applications on Windows, hitherto only available on Linux.
 - TensorFlow 2.10 was the last TensorFlow release that supported GPU on native-Windows. Starting with TensorFlow 2.11, one needs to have WSL2 to use TensorFlow. The other compromise is to use tensorflow-cpu[^1].
 
 ### Steps  
